@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@ToString
 public class Venda {
 
     @Id
@@ -28,6 +30,9 @@ public class Venda {
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = true)
     private Cliente cliente;
+
+    @JoinColumn(name = "caixa_id", nullable = true)
+    private Long caixa;
 
     private String formaPagamento;
 

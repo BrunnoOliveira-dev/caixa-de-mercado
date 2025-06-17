@@ -1,0 +1,205 @@
+/* Paleta de cores suave, moderna e clean */
+:root {
+    --primary-color: #6C63FF; /* Roxo suave */
+    --secondary-color: #FFD369; /* Amarelo pastel */
+    --background-color: #F8F9FA; /* Cinza muito claro */
+    --text-color: #343A40; /* Cinza escuro */
+    --border-color: #DEE2E6; /* Cinza claro para bordas */
+    --button-hover-color: #5A54E6; /* Roxo mais escuro para hover */
+    --button-text-color: #FFFFFF; /* Branco para texto em botões */
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#cart {
+    width: 100%;
+    background: #E9ECEF; /* Cinza mais escuro para destacar a seção */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.3rem;
+}
+
+/* Estilo para o carrinho de compras */
+#cart-list {
+    max-height: 300px; /* Limitar a altura do carrinho */
+    overflow-y: auto; /* Adicionar barra de rolagem se necessário */
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.cart-item span {
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item input[type="number"] {
+    width: 50px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.cart-item button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+.cart-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+#pagamento {
+    margin-top: 1.5rem;
+    background-color: #343a40; /* Cor escura para destaque */
+    color: #ffffff; /* Texto branco para contraste */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#payment label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Garantir que os rótulos também fiquem brancos */
+}
+
+#payment select, #payment input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#change {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+#checkout-button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--secondary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#checkout-button:hover {
+    background: var(--button-hover-color);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    margin-top: 2rem;
+}
+
+#product-search {
+    width: 100%;
+    /* Garante que a seção ocupe toda a largura disponível */
+    margin-bottom: 2rem;
+}
+
+#product-search .card {
+    width: 100%;
+    /* Remove altura fixa para não igualar à altura das outras seções */
+    min-height: unset;
+    height: auto;
+}
+
+#product-search,
+#cart {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cart.row {
+    width: 100%;
+    margin: 0;
+}
+
+#cart .col-12,
+#pagamento.col-12 {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    #product-search {
+        margin-bottom: 2rem;
+    }
+    #product-search .card {
+        width: 100%;
+        min-height: unset;
+        height: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    #product-search,
+    #cart {
+        max-width: 1000px;
+    }
+}

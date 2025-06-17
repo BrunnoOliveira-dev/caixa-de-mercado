@@ -1,0 +1,19 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Bootstrap's light background */
+}
+
+header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: #e9ecef; /* Bootstrap's light footer background */
+    color: #6c757d; /* Bootstrap's muted text color */
+}

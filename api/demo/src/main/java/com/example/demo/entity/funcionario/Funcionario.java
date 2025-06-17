@@ -1,6 +1,6 @@
 package com.example.demo.entity.funcionario;
 
-import com.example.demo.entity.TipoFuncionario;
+import com.example.demo.entity.funcionario.TipoFuncionario;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,6 +39,9 @@ public class Funcionario {
 
     @Column(nullable = false)
     private BigDecimal salario;
+
+    @Column(nullable = false)
+    private String senha;
 
 
 
